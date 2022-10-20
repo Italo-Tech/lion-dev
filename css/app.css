@@ -84,6 +84,10 @@ p {
   width: 100vw;
   height: auto;
 }
+#header .logo {
+  background-size: cover;
+  width: 8rem;
+}
 #header .header {
   min-height: 8vh;
   background-color: rgba(31, 30, 30, 0.24);
