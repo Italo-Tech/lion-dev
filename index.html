@@ -269,31 +269,40 @@
           </a>
         </div>
       </div>
-      <p>Copyright © 2021 Lion Dev. All rights reserved</p>
-      <p>v.1.0.2</p>
+      <p>Copyright © 2021 Lion Dev. Todos os direitos reservados</p>
+      <p>v.1.1.0</p>
     </div>
   </section>
   <!-- End Footer -->
 
-  <script src="https://widzap.com/cdn/1/src.min.js"></script>
-
   <section>
-    <!-- WidZap -->
-    <script>
-      let options = {
-        whatsapp: "5511984111337",
-        position: "right",
-        type: 1,
-        title: "👋 Olá! Tudo bem? Fale conosco pelo WhatsApp!",
-        text: "Nossa equipe está esperando seu contato. Inicie uma conversa abaixo.",
-        primary: "#56cbab",
-        secondary: "#00d2b5",
-        title_color: "#000000",
-        text_color: "#606060"
-      };
-      iniWidZap();
+    <script type="module">
+      import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.2/dist/web.js'
+
+      Typebot.initBubble({
+        typebot: "my-typebot-96dwk0q",
+        previewMessage: {
+          message: "Olá, tenho uma pergunta para você!",
+          autoShowDelay: 10000,
+          avatarUrl:
+            "https://pbs.twimg.com/profile_images/1734381672546680832/IbJZVEun_400x400.jpg",
+        },
+        theme: {
+          button: {
+            backgroundColor: "#FFFFFF",
+            customIconSrc:
+              "https://s3.typebot.io/public/workspaces/clpmsxzc0003ul70g10syupeb/typebots/clpmt1ku7002jl70fm96dwk0q/bubble-icon?v=1702353132883",
+          },
+          previewMessage: {
+            backgroundColor: "#D09C46",
+            textColor: "#FFFFFF",
+            closeButtonBackgroundColor: "#FFFFFF",
+            closeButtonIconColor: "#000000",
+          },
+          chatWindow: { backgroundColor: "#fff" },
+        },
+      });
     </script>
-    <!-- End WidZap -->
   </section>
 
   <script src="/js/main.js"></script>
