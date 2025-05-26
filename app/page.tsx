@@ -43,9 +43,15 @@ const heroSlides = [
 const services = [
   {
     icon: "https://img.icons8.com/bubbles/100/000000/web.png",
-    title: "Web Design",
+    title: "Landing Pages",
     description:
       "Nosso trabalho é garantir que seu site seja atrativo aos olhos de seus clientes, por isso temos como foco a garantia de lhes oferecer um bom design gráfico.",
+  },
+  {
+    icon: "https://img.icons8.com/?size=100&id=zR9H9QHroX8j&format=png&color=000000",
+    title: "Software's",
+    description:
+      "Desenvolvimento de sistemas e aplicações personalizadas para otimizar processos, gerar valor e acelerar seu negócio.",
   },
   {
     icon: "https://img.icons8.com/bubbles/100/000000/domain.png",
@@ -65,31 +71,57 @@ const services = [
     description:
       "Seu site é hospedado em um servidor, possibilitando seus clientes visitar sua página a qualquer momento e em qualquer lugar onde haja internet.",
   },
+  {
+    icon: "https://img.icons8.com/?size=100&id=115635&format=png&color=000000",
+    title: "CV's Personalizados",
+    description:
+      "Currículos modernos, profissionais e personalizados para destacar sua trajetória e aumentar suas chances no mercado de trabalho.",
+  },
+  {
+    icon: "https://img.icons8.com/?size=100&id=122500&format=png&color=000000",
+    title: "Cartões de Visita",
+    description:
+      "Cartões de visita digitais ou físicos, feitos sob medida para você se apresentar com profissionalismo e causar uma ótima primeira impressão.",
+  },
+  {
+    icon: "https://img.icons8.com/?size=100&id=111406&format=png&color=000000",
+    title: "Flyer - Marketing",
+    description:
+      "Criação de flyers, posts e materiais gráficos de alto impacto para fortalecer sua presença nas redes sociais e divulgar seus serviços ou produtos.",
+  },
 ]
 
 const projects = [
   {
+    title: "OSESP",
+    url: "#",
+    description:
+      "O software desenvolvido para a OSESP (Orquestra Sinfônica do Estado de São Paulo) tem como objetivo otimizar a gestão de concertos, facilitando o controle de repertórios, registros de apresentações e emissão de relatórios, tornando os processos mais ágeis e eficientes.",
+    image: "/osesp-1.png?height=300&width=400",
+    category: "Software",
+  },
+  {
     title: "Beauty Salon",
     url: "https://italo-tech.github.io/beauty-salon/",
     description:
-      "Caravan é um projeto de um Salão de Beleza, desenvolvido com objetivo de aprendizagem e aprimoramento de boas práticas de programação.",
-    image: "/placeholder.svg?height=300&width=400",
+      "Beauty Salon é um projeto educacional focado em um salão de beleza, criado para promover o aprendizado e a aplicação de boas práticas de programação, unindo conhecimento científico com desenvolvimento de software.",
+    image: "/beauty.png?height=300&width=400",
     category: "Website Institucional",
   },
   {
-    title: "Caravan",
-    url: "https://italo-tech.github.io/caravan-bootstrap/",
+    title: "DIRTEC",
+    url: "https://dirtec-landing-page.vercel.app/",
     description:
-      "Caravan é um projeto de uma agência de viagens, desenvolvido com objetivo de aprendizagem e aprimoramento de boas práticas de programação.",
-    image: "/placeholder.svg?height=300&width=400",
-    category: "E-commerce",
+      "Este projeto foi desenvolvido para uma empresa especializada em soluções de energia, oferecendo serviços de venda, manutenção e assistência técnica em nobreaks. O site tem como objetivo apresentar os serviços, transmitir credibilidade e facilitar o contato dos clientes que buscam segurança e autonomia energética para seus equipamentos.",
+    image: "/dirtec.png?height=300&width=400",
+    category: "Website Intitucional",
   },
   {
     title: "Wildbeast",
     url: "https://italo-tech.github.io/wild-beast/",
     description:
-      "Wildbeast é um projeto educacional acerca de lobos, desenvolvido com o objetivo de aprendizagem e aprimoramento de boas práticas de programação.",
-    image: "/placeholder.svg?height=300&width=400",
+      "Wildbeast é um projeto educacional focado no estudo dos lobos, criado para promover o aprendizado e a aplicação de boas práticas de programação, unindo conhecimento científico com desenvolvimento de software.",
+    image: "/wildbeast.png?height=300&width=400",
     category: "Portal Educacional",
   },
   {
@@ -97,23 +129,15 @@ const projects = [
     url: "https://italo-tech.github.io/projeto-brafe/",
     description:
       "Brafé é um projeto de uma Cafeteria, desenvolvido com objetivo de aprendizagem e aprimoramento de boas práticas de programação.",
-    image: "/placeholder.svg?height=300&width=400",
-    category: "Website Comercial",
-  },
-  {
-    title: "D-BOARD",
-    url: "#",
-    description:
-      "O projeto D-BOARD é um site de Dashboard administrativo desenvolvido para aprendizagem de novas tecnologias como VueJS, TailwindCSS, gráfico e componentes visuais.",
-    image: "/placeholder.svg?height=300&width=400",
-    category: "Dashboard",
+    image: "/brafe.png?height=300&width=400",
+    category: "Website Intitucional",
   },
   {
     title: "Landing",
     url: "#",
     description:
       "O projeto Landing é site de viagens fake desenvolvido para aprendizagem de novas tecnologias, como por exemplo tailwindcss e boas práticas de layouts.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/landing.png?height=300&width=400",
     category: "Landing Page",
   },
 ]
@@ -290,9 +314,9 @@ export default function LionDevWebsite() {
         ))}
 
         {/* Content */}
-        <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
+        <div className="relative z-20 text-center text-white max-w-6xl mx-auto px-4">
           <div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">{heroSlides[currentSlide].title}</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">{heroSlides[currentSlide].title}</h1>
             <h2 className="text-2xl md:text-3xl mb-4 text-amber-400">{heroSlides[currentSlide].subtitle}</h2>
             {/* <p className="text-xl mb-8 text-gray-200">{heroSlides[currentSlide].description}</p> */}
           </div>
@@ -490,7 +514,7 @@ export default function LionDevWebsite() {
                 className="hover:scale-110 transition-transform"
               />
             </Link>
-            <Link href="https://www.instagram.com/italo_santos_tech/" target="_blank">
+            <Link href="https://www.instagram.com/italo_lion_dev/" target="_blank">
               <Image
                 src="https://img.icons8.com/bubbles/50/000000/instagram-new.png"
                 alt="Instagram"
