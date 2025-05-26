@@ -9,22 +9,34 @@ import { Card, CardContent } from "@/components/ui/card"
 
 const heroSlides = [
   {
-    image: "/placeholder.svg?height=600&width=800",
-    title: "Transforme Sua Visão em Realidade Digital",
-    subtitle: "Criamos sites institucionais que convertem visitantes em clientes",
-    description: "Sua empresa merece uma presença digital profissional e impactante",
+    image: "/carrossel-1.png?height=600&width=800",
+    title: "Transformamos Ideias em Soluções Digitais",
+    subtitle: "Sites institucionais e softwares sob medida para sua empresa",
+    description: "Tenha uma presença online que gera valor e resultados reais",
   },
   {
-    image: "/placeholder.svg?height=600&width=800",
-    title: "Desenvolvimento Web de Alto Impacto",
-    subtitle: "Soluções personalizadas para o crescimento do seu negócio",
-    description: "Tecnologia de ponta para resultados extraordinários",
+    image: "/carrossel-2.png?height=600&width=800",
+    title: "Sua Empresa no Próximo Nível",
+    subtitle: "Desenvolvemos soluções digitais que impulsionam negócios",
+    description: "Tenha um site profissional e entregue uma experiência de excelência",
   },
   {
-    image: "/placeholder.svg?height=600&width=800",
-    title: "Sua Marca no Mundo Digital",
-    subtitle: "Design moderno e funcionalidade que impressiona",
-    description: "Conquiste novos clientes com uma presença online profissional",
+    image: "/carrossel-3.png?height=600&width=800",
+    title: "Soluções Inteligentes Para Seu Negócio",
+    subtitle: "Softwares personalizados e sites profissionais que fazem a diferença",
+    description: "Destaque-se no mercado com tecnologia feita para sua empresa",
+  },
+  {
+    image: "/carrossel-4.png?height=600&width=800",
+    title: "Presença Digital que Gera Resultados",
+    subtitle: "Criamos sites institucionais modernos e eficientes",
+    description: "Conquiste mais clientes e fortaleça sua marca online",
+  },
+  {
+    image: "/carrossel-5.png?height=600&width=800",
+    title: "Software e Web Que Conectam Você Ao Sucesso",
+    subtitle: "Do site ao sistema, entregamos soluções sob medida",
+    description: "Seu projeto digital começa aqui, com qualidade, performance e design",
   },
 ]
 
@@ -109,11 +121,26 @@ const projects = [
 export default function LionDevWebsite() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isHeaderTransparent, setIsHeaderTransparent] = useState(true)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSection = document.getElementById("hero")
+      if (heroSection) {
+        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight
+        const scrollPosition = window.scrollY + 100 // offset para transição suave
+        setIsHeaderTransparent(scrollPosition < heroBottom)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length)
-    }, 5000)
+    }, 8000)
     return () => clearInterval(timer)
   }, [])
 
@@ -128,7 +155,11 @@ export default function LionDevWebsite() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+      <header
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+          isHeaderTransparent ? "bg-transparent" : "bg-gray-900 backdrop-blur-sm shadow-sm"
+        }`}
+      >
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between py-4">
             <div className="flex items-center space-x-3">
@@ -139,54 +170,95 @@ export default function LionDevWebsite() {
                 height={50}
                 className="rounded-full"
               />
-              <h1 className="text-2xl font-bold">
+              <h1 className="text-2xl font-bold transition-colors duration-300 text-white">
                 <span className="text-amber-500">L</span>ION <span className="text-amber-500">D</span>EV
               </h1>
             </div>
 
             <div className="hidden md:flex space-x-8">
-              <Link href="#hero" className="text-gray-700 hover:text-amber-500 transition-colors">
+              <Link href="#hero" className="transition-colors duration-300  text-white hover:text-amber-400">
                 Início
               </Link>
-              <Link href="#services" className="text-gray-700 hover:text-amber-500 transition-colors">
+              <Link href="#services" className="transition-colors duration-300  text-white hover:text-amber-400">
                 Serviços
               </Link>
-              <Link href="#projects" className="text-gray-700 hover:text-amber-500 transition-colors">
+              <Link href="#projects" className="transition-colors duration-300  text-white hover:text-amber-400">
                 Projetos
               </Link>
-              <Link href="#about" className="text-gray-700 hover:text-amber-500 transition-colors">
+              <Link href="#about" className="transition-colors duration-300  text-white hover:text-amber-400">
                 Sobre
               </Link>
-              <Link href="#contact" className="text-gray-700 hover:text-amber-500 transition-colors">
+              <Link href="#contact" className="transition-colors duration-300  text-white hover:text-amber-400">
                 Contato
               </Link>
             </div>
 
             <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               <div className="w-6 h-6 flex flex-col justify-center space-y-1">
-                <div className="w-full h-0.5 bg-gray-700"></div>
-                <div className="w-full h-0.5 bg-gray-700"></div>
-                <div className="w-full h-0.5 bg-gray-700"></div>
+                <div
+                  className={`w-full h-0.5 transition-colors duration-300 ${
+                    isHeaderTransparent ? "bg-white" : "bg-gray-700"
+                  }`}
+                ></div>
+                <div
+                  className={`w-full h-0.5 transition-colors duration-300 ${
+                    isHeaderTransparent ? "bg-white" : "bg-gray-700"
+                  }`}
+                ></div>
+                <div
+                  className={`w-full h-0.5 transition-colors duration-300 ${
+                    isHeaderTransparent ? "bg-white" : "bg-gray-700"
+                  }`}
+                ></div>
               </div>
             </button>
           </nav>
 
           {isMenuOpen && (
-            <div className="md:hidden py-4 border-t">
+            <div
+              className={`md:hidden py-4 border-t transition-colors duration-300 ${
+                isHeaderTransparent ? "border-white/20 bg-black/20 backdrop-blur-sm" : "border-gray-200 bg-white"
+              }`}
+            >
               <div className="flex flex-col space-y-4">
-                <Link href="#hero" className="text-gray-700 hover:text-amber-500">
+                <Link
+                  href="#hero"
+                  className={`transition-colors duration-300 ${
+                    isHeaderTransparent ? "text-white hover:text-amber-400" : "text-gray-700 hover:text-amber-500"
+                  }`}
+                >
                   Início
                 </Link>
-                <Link href="#services" className="text-gray-700 hover:text-amber-500">
+                <Link
+                  href="#services"
+                  className={`transition-colors duration-300 ${
+                    isHeaderTransparent ? "text-white hover:text-amber-400" : "text-gray-700 hover:text-amber-500"
+                  }`}
+                >
                   Serviços
                 </Link>
-                <Link href="#projects" className="text-gray-700 hover:text-amber-500">
+                <Link
+                  href="#projects"
+                  className={`transition-colors duration-300 ${
+                    isHeaderTransparent ? "text-white hover:text-amber-400" : "text-gray-700 hover:text-amber-500"
+                  }`}
+                >
                   Projetos
                 </Link>
-                <Link href="#about" className="text-gray-700 hover:text-amber-500">
+                <Link
+                  href="#about"
+                  className={`transition-colors duration-300 ${
+                    isHeaderTransparent ? "text-white hover:text-amber-400" : "text-gray-700 hover:text-amber-500"
+                  }`}
+                >
                   Sobre
                 </Link>
-                <Link href="#contact" className="text-gray-700 hover:text-amber-500">
+                <Link
+                  href="#contact"
+                  className={`transition-colors duration-300 ${
+                    isHeaderTransparent ? "text-white hover:text-amber-400" : "text-gray-700 hover:text-amber-500"
+                  }`}
+                >
                   Contato
                 </Link>
               </div>
@@ -219,9 +291,11 @@ export default function LionDevWebsite() {
 
         {/* Content */}
         <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">{heroSlides[currentSlide].title}</h1>
-          <h2 className="text-2xl md:text-3xl mb-4 text-amber-400">{heroSlides[currentSlide].subtitle}</h2>
-          <p className="text-xl mb-8 text-gray-200">{heroSlides[currentSlide].description}</p>
+          <div>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">{heroSlides[currentSlide].title}</h1>
+            <h2 className="text-2xl md:text-3xl mb-4 text-amber-400">{heroSlides[currentSlide].subtitle}</h2>
+            {/* <p className="text-xl mb-8 text-gray-200">{heroSlides[currentSlide].description}</p> */}
+          </div>
           <Button asChild size="lg" className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 text-lg">
             <Link href="#projects">Ver Portfólio</Link>
           </Button>
@@ -340,7 +414,7 @@ export default function LionDevWebsite() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <Image
-                src="/placeholder.svg?height=400&width=400"
+                src="/perfil.png?height=400&width=400"
                 alt="Ítalo - Desenvolvedor"
                 width={400}
                 height={400}
@@ -351,12 +425,10 @@ export default function LionDevWebsite() {
               <h2 className="text-4xl font-bold mb-6">
                 Sobre <span className="text-amber-500">mim</span>
               </h2>
-              <h3 className="text-2xl text-amber-500 mb-6">Front End Developer</h3>
+              <h3 className="text-2xl text-amber-500 mb-6">Full Stack Developer</h3>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Sou Analista em Desenvolvimento de Sistemas formado na universidade Nove de Julho e Desenvolvedor Front
-                End pela BeeLabs, onde atualmente presto serviços com criação e manutenção de softwares em geral.
-                Atualmente, estudo novas tecnologias de desenvolvimento para levar soluções ao público, e estou sempre
-                em busca de levar e trazer conhecimento extra onde quer que seja.
+                Sou Analista em Desenvolvimento de Sistemas, formado pela Universidade Nove de Julho, e atuo como Desenvolvedor Full Stack, especializado na criação e manutenção de softwares e soluções web sob medida.
+                Ao longo da minha trajetória, venho ajudando empresas e empreendedores a potencializar seus negócios através de tecnologia, automação e presença digital de alta performance.
               </p>
             </div>
           </div>
@@ -448,11 +520,31 @@ export default function LionDevWebsite() {
           </div>
 
           <div className="border-t border-gray-700 pt-8">
-            <p className="text-gray-400">Copyright © 2021 Lion Dev. Todos os direitos reservados</p>
-            <p className="text-gray-500 mt-2">v.1.1.0</p>
+            <p className="text-gray-400">Copyright © 2025 Lion Dev. Todos os direitos reservados</p>
+            <p className="text-gray-500 mt-2">v.2.1.0</p>
           </div>
         </div>
       </footer>
+
+      {/* WhatsApp Floating Button */}
+      <Link
+        href="https://wa.me/5511984111337" // coloque seu número com DDD
+        target="_blank"
+        className="fixed bottom-6 right-6 z-50"
+      >
+        <div className="relative">
+          {/* Círculo de animação */}
+          <span className="absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75 animate-ping"></span>
+          {/* Ícone */}
+          <Image
+            src="/whatsapp.png" // use o ícone que desejar
+            alt="WhatsApp"
+            width={60}
+            height={60}
+            className="rounded-full shadow-lg hover:scale-110 transition-transform"
+          />
+        </div>
+      </Link>
     </div>
   )
 }
