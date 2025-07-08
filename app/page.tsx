@@ -552,7 +552,7 @@ export default function LionDevWebsite() {
 
       {/* WhatsApp Floating Button */}
       <Link
-        href="https://wa.me/5511984111337" // coloque seu número com DDD
+        href="https://wa.me/5511962152468" // coloque seu número com DDD
         target="_blank"
         className="fixed bottom-6 right-6 z-50"
       >
