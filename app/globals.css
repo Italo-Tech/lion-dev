@@ -2,13 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  /* compensa o header fixo ao navegar por âncoras */
+  scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+/* Entrada suave das seções ao rolar a página */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Halo do botão do WhatsApp: expande devagar e some, sem piscar */
+@keyframes whatsapp-breathe {
+  0% {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+  70%,
+  100% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+}
+
+.whatsapp-halo {
+  animation: whatsapp-breathe 3.2s ease-out infinite;
+}
+
+.whatsapp-halo-delayed {
+  animation: whatsapp-breathe 3.2s ease-out 1.6s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .whatsapp-halo,
+  .whatsapp-halo-delayed {
+    animation: none;
+    opacity: 0;
   }
 }
 
