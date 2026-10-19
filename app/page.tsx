@@ -57,27 +57,27 @@ const navLinks = [
 
 const heroSlides = [
   {
-    image: "/carrossel-1.png?height=600&width=800",
+    image: "/carrossel-1.png",
     title: "Transformamos Ideias em Soluções Digitais",
     subtitle: "Sites institucionais e softwares sob medida para sua empresa",
   },
   {
-    image: "/carrossel-2.png?height=600&width=800",
+    image: "/carrossel-2.png",
     title: "Sua Empresa no Próximo Nível",
     subtitle: "Desenvolvemos soluções digitais que impulsionam negócios",
   },
   {
-    image: "/carrossel-3.png?height=600&width=800",
+    image: "/carrossel-3.png",
     title: "Soluções Inteligentes Para Seu Negócio",
     subtitle: "Softwares personalizados e sites profissionais que fazem a diferença",
   },
   {
-    image: "/carrossel-4.png?height=600&width=800",
+    image: "/carrossel-4.png",
     title: "Presença Digital que Gera Resultados",
     subtitle: "Criamos sites institucionais modernos e eficientes",
   },
   {
-    image: "/carrossel-5.png?height=600&width=800",
+    image: "/carrossel-5.png",
     title: "Software e Web Que Conectam Você Ao Sucesso",
     subtitle: "Do site ao sistema, entregamos soluções sob medida",
   },
@@ -171,7 +171,7 @@ const projects = [
     url: "#",
     description:
       "Software desenvolvido para a OSESP (Orquestra Sinfônica do Estado de São Paulo) para otimizar a gestão de concertos: controle de repertórios, registro de apresentações e emissão de relatórios, tornando os processos mais ágeis e eficientes.",
-    image: "/osesp-1.png?height=300&width=400",
+    image: "/osesp-1.png",
     category: "Software",
   },
   {
@@ -179,7 +179,7 @@ const projects = [
     url: "https://dirtec-landing-page.vercel.app/",
     description:
       "Site para uma empresa de soluções de energia, com venda, manutenção e assistência técnica em nobreaks. Apresenta os serviços, transmite credibilidade e facilita o contato de quem busca segurança energética.",
-    image: "/dirtec.png?height=300&width=400",
+    image: "/dirtec.png",
     category: "Website Institucional",
   },
   {
@@ -187,7 +187,7 @@ const projects = [
     url: "https://italo-tech.github.io/beauty-salon/",
     description:
       "Projeto educacional de um salão de beleza, criado para aplicar boas práticas de programação e de layout responsivo.",
-    image: "/beauty.png?height=300&width=400",
+    image: "/beauty.png",
     category: "Website Institucional",
   },
   {
@@ -195,7 +195,7 @@ const projects = [
     url: "https://italo-tech.github.io/wild-beast/",
     description:
       "Projeto educacional sobre o estudo dos lobos, unindo conteúdo científico com boas práticas de desenvolvimento.",
-    image: "/wildbeast.png?height=300&width=400",
+    image: "/wildbeast.png",
     category: "Portal Educacional",
   },
   {
@@ -203,7 +203,7 @@ const projects = [
     url: "https://italo-tech.github.io/projeto-brafe/",
     description:
       "Site de uma cafeteria, desenvolvido para aprendizagem e aprimoramento de boas práticas de programação.",
-    image: "/brafe.png?height=300&width=400",
+    image: "/brafe.png",
     category: "Website Institucional",
   },
   {
@@ -211,7 +211,7 @@ const projects = [
     url: "#",
     description:
       "Site de viagens fictício desenvolvido para estudar novas tecnologias, como Tailwind CSS, e boas práticas de layout.",
-    image: "/landing.png?height=300&width=400",
+    image: "/landing.png",
     category: "Landing Page",
   },
 ]
@@ -365,7 +365,7 @@ export default function LionDevWebsite() {
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between py-4" aria-label="Navegação principal">
             <a href="#hero" className="flex items-center gap-3" onClick={() => setIsMenuOpen(false)}>
-              <Image src="/logo.png?height=50&width=50" alt="" width={44} height={44} className="rounded-full" />
+              <Image src="/logo.png" alt="" width={44} height={44} className="rounded-full" />
               <span className="text-xl md:text-2xl font-bold tracking-wide text-white">
                 <span className="text-amber-500">L</span>ION <span className="text-amber-500">D</span>EV
               </span>
