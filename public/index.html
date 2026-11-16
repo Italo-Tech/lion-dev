@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lion Dev - Desenvolvimento Web</title>
+  <meta name="description" content="Sites institucionais e softwares sob medida para sua empresa. Ítalo Henrique, Desenvolvedor Full Stack.">
+  <meta name="theme-color" content="#07080B">
+  <link rel="icon" href="/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="/logo.png">
+  <link rel="stylesheet" href="/sites-incriveis.css">
+  <link rel="stylesheet" href="/estilo.css">
+  <script src="/sites-incriveis.js" defer></script>
+  <script src="/pagina.js" defer></script>
+</head>
+<body>
+
+<a class="pular" href="#services">Pular para o conteúdo</a>
+
+<!-- ===================== CABEÇALHO ===================== -->
+<header class="topo" id="topo">
+  <a class="marca" href="#hero" aria-label="Lion Dev, voltar ao início">
+    <img src="/logo.png" alt="" width="28" height="28">
+    <span>Lion<b>Dev</b></span>
+  </a>
+  <nav aria-label="Navegação principal">
+    <ul>
+      <li><a href="#hero">Início</a></li>
+      <li><a href="#services">Serviços</a></li>
+      <li><a href="#projects">Projetos</a></li>
+      <li><a href="#about">Sobre</a></li>
+      <li><a href="#contact">Contato</a></li>
+    </ul>
+  </nav>
+  <a class="botao botao--fino" href="https://wa.me/5511984111337?text=Ol%C3%A1%2C%20%C3%8Dtalo!%20Vim%20pelo%20site%20da%20Lion%20Dev%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer" aria-label="Fale comigo no WhatsApp">Fale comigo</a>
+</header>
+
+<main>
+
+<!-- ===================== 1 · LEÃO DE CÓDIGO (PICO) ===================== -->
+<section id="hero" class="abertura" data-fx-fixa data-fx-altura="5" data-fx-fundo="#07080B" data-fx-tinta="#ECE8E0">
+  <div class="fx-palco abertura__palco">
+    <div class="abertura__halo" aria-hidden="true"></div>
+    <div class="leao" aria-hidden="true">
+      <img class="leao__solido" src="/logo.png" alt="">
+      <span class="leao__brilho"></span>
+    </div>
+    <canvas id="leao-codigo" aria-hidden="true"></canvas>
+
+    <div class="abertura__texto">
+      <p class="rotulo">Ítalo Henrique · Desenvolvedor Full Stack</p>
+      <h1 class="abertura__titulo" data-fx="palavras" data-fx-duracao="900">Transformamos Ideias em Soluções Digitais</h1>
+      <p class="abertura__sub">Sites institucionais e softwares sob medida para sua empresa</p>
+      <div class="acoes">
+        <a class="botao botao--ouro" href="#projects">Ver portfólio</a>
+        <a class="botao botao--linha" href="https://wa.me/5511984111337?text=Ol%C3%A1%2C%20%C3%8Dtalo!%20Vim%20pelo%20site%20da%20Lion%20Dev%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
+      </div>
+    </div>
+
+    <div class="hud" aria-hidden="true">
+      <span class="hud__arquivo">lion.dev</span>
+      <span class="hud__barra"><i></i></span>
+      <span class="hud__estado">compilando <b>0%</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 2 · PAINEL ===================== -->
+<section class="painel" aria-labelledby="painel-titulo" data-fx-fundo="#07080B" data-fx-tinta="#ECE8E0">
+  <h2 id="painel-titulo" class="so-leitor">Em números</h2>
+  <div class="painel__grade">
+    <div class="instrumento" data-fx="surgir">
+      <span class="instrumento__escala" aria-hidden="true"></span>
+      <strong class="instrumento__valor"><span data-fx="contar" data-fx-fim="5" data-fx-sufixo="+" data-fx-duracao="1400">0</span></strong>
+      <span class="instrumento__rotulo">anos como Desenvolvedor Full Stack</span>
+    </div>
+    <div class="instrumento" data-fx="surgir" data-fx-atraso="120">
+      <span class="instrumento__escala" aria-hidden="true"></span>
+      <strong class="instrumento__valor"><span data-fx="contar" data-fx-fim="1700" data-fx-sufixo="+" data-fx-duracao="1800">0</span></strong>
+      <span class="instrumento__rotulo">testes automatizados</span>
+    </div>
+    <div class="instrumento" data-fx="surgir" data-fx-atraso="240">
+      <span class="instrumento__escala" aria-hidden="true"></span>
+      <strong class="instrumento__valor"><span data-fx="contar" data-fx-fim="2400" data-fx-prefixo="~" data-fx-duracao="1800">0</span></strong>
+      <span class="instrumento__rotulo">convidados</span>
+    </div>
+    <div class="instrumento instrumento--ouro" data-fx="surgir" data-fx-atraso="360">
+      <span class="instrumento__escala" aria-hidden="true"></span>
+      <strong class="instrumento__valor"><span data-fx="contar" data-fx-fim="2" data-fx-prefixo="R$ " data-fx-sufixo=" mi" data-fx-duracao="1200">0</span></strong>
+      <span class="instrumento__rotulo">de receita prevista</span>
+    </div>
+  </div>
+  <p class="painel__legenda" data-fx="surgir" data-fx-atraso="500"><b>Full Cycle</b> <span>do banco de dados ao deploy</span></p>
+</section>
+
+<!-- ===================== 3 · SERVIÇOS (TRILHO) ===================== -->
+<section id="services" class="servicos" data-fx-fixa data-fx-altura="3.4" data-fx-fundo="#0A0C10" data-fx-tinta="#ECE8E0">
+  <div class="fx-palco servicos__palco">
+    <header class="servicos__cabeca">
+      <p class="rotulo">Serviços</p>
+      <h2 class="titulo-2">Do primeiro site ao sistema que <span class="tom">sustenta a operação</span></h2>
+      <p class="servicos__lead">Soluções digitais sob medida, construídas com o mesmo cuidado técnico usado em projetos de grande volume de vendas.</p>
+    </header>
+
+    <div class="servicos__trilho" data-fx="trilho">
+      <article class="servico" style="--degrau:1">
+        <div class="servico__topo"><span class="servico__n">01</span><span class="degraus" aria-hidden="true"><i class="on"></i><i></i><i></i></span></div>
+        <h3>Sites e landing pages</h3>
+        <p>Sites institucionais rápidos, responsivos e preparados para o Google, pensados para transformar visitantes em clientes.</p>
+        <ul><li>Design responsivo</li><li>SEO para buscadores</li><li>Domínio e hospedagem</li></ul>
+      </article>
+      <article class="servico" style="--degrau:2">
+        <div class="servico__topo"><span class="servico__n">02</span><span class="degraus" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span></div>
+        <h3>E-commerce e pagamentos</h3>
+        <p>Lojas e plataformas de venda com checkout seguro e conciliação financeira, já validadas em uma operação com receita prevista de R$ 2 milhões.</p>
+        <ul><li>Pix, cartão parcelado e split</li><li>Asaas, Cielo e Stripe</li><li>Controle de estoque e reservas</li></ul>
+      </article>
+      <article class="servico servico--topo" style="--degrau:3">
+        <div class="servico__topo"><span class="servico__n">03</span><span class="degraus" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+        <h3>Sistemas sob medida</h3>
+        <p>Sistemas web e painéis administrativos desenhados para o seu processo: automatizam tarefas, organizam dados e reduzem o retrabalho da equipe.</p>
+        <ul><li>Painéis administrativos</li><li>Integração com APIs</li><li>Relatórios e indicadores</li></ul>
+      </article>
+      <article class="servico servico--apoio" style="--degrau:2">
+        <div class="servico__topo"><span class="servico__n">04</span></div>
+        <h3>Design e materiais gráficos</h3>
+        <p>Currículos, cartões de visita e peças para redes sociais com a mesma identidade visual da sua presença digital.</p>
+        <ul><li>CVs personalizados</li><li>Cartões de visita</li><li>Flyers e posts</li></ul>
+      </article>
+      <span class="servicos__fim" aria-hidden="true"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 4 · COMO FUNCIONA (4 MARCHAS) ===================== -->
+<section class="marchas" aria-labelledby="marchas-titulo" data-fx-fundo="#12151A" data-fx-tinta="#ECE8E0">
+  <div class="marchas__esq">
+    <h2 id="marchas-titulo" class="titulo-2" data-fx="subir">Como funciona</h2>
+    <svg class="cambio" data-fx="surgir" viewBox="0 0 240 240" role="img" aria-label="Grade de câmbio em H com quatro marchas, uma para cada etapa">
+      <path class="cambio__trilho" pathLength="1" d="M60 40 V200 M180 40 V200 M60 120 H180"/>
+      <g class="cambio__m" style="--i:0"><circle cx="60" cy="40" r="19"/><text x="60" y="45">1</text></g>
+      <g class="cambio__m" style="--i:1"><circle cx="60" cy="200" r="19"/><text x="60" y="205">2</text></g>
+      <g class="cambio__m" style="--i:2"><circle cx="180" cy="40" r="19"/><text x="180" y="45">3</text></g>
+      <g class="cambio__m" style="--i:3"><circle cx="180" cy="200" r="19"/><text x="180" y="205">4</text></g>
+      <circle class="cambio__pomo" cx="120" cy="120" r="7"/>
+    </svg>
+    <a class="botao botao--linha" data-fx="subir" data-fx-atraso="150" href="https://wa.me/5511984111337?text=Ol%C3%A1%2C%20%C3%8Dtalo!%20Vim%20pelo%20site%20da%20Lion%20Dev%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer">Conversar sobre meu projeto</a>
+  </div>
+
+  <ol class="etapas">
+    <li data-fx="subir"><span class="etapas__n">1</span><div><h3>Conversa inicial</h3><p>Entendo o seu negócio, o objetivo e o problema a resolver.</p></div></li>
+    <li data-fx="subir" data-fx-atraso="120"><span class="etapas__n">2</span><div><h3>Proposta</h3><p>Escopo, prazo e investimento definidos de forma clara.</p></div></li>
+    <li data-fx="subir" data-fx-atraso="240"><span class="etapas__n">3</span><div><h3>Desenvolvimento</h3><p>Entregas parciais para você acompanhar cada etapa.</p></div></li>
+    <li data-fx="subir" data-fx-atraso="360"><span class="etapas__n">4</span><div><h3>Entrega e suporte</h3><p>Publicação, ajustes finais e acompanhamento.</p></div></li>
+  </ol>
+</section>
+
+<!-- ===================== 5 · CASE KUMON / I GO ===================== -->
+<div id="projects">
+  <header class="portfolio-cabeca" data-fx-fundo="#050608" data-fx-tinta="#ECE8E0">
+    <p class="rotulo" data-fx="surgir">Portfólio</p>
+    <h2 class="titulo-1" data-fx="subir">Projetos <span class="tom">recentes</span></h2>
+    <p class="portfolio-cabeca__sub" data-fx="subir" data-fx-atraso="120">Uma seleção de sistemas e sites desenvolvidos para clientes e estudos.</p>
+  </header>
+
+  <section class="kumon" aria-labelledby="kumon-titulo" data-fx-fixa data-fx-altura="4" data-fx-etapas="3" data-fx-fundo="#050608" data-fx-tinta="#ECE8E0">
+    <div class="fx-palco kumon__palco">
+      <div class="kumon__ficha">
+        <p class="rotulo"><span class="selo">Destaque</span> E-commerce · Software</p>
+        <h3 id="kumon-titulo" class="kumon__titulo">Loja e bilheteria para eventos corporativos</h3>
+        <p class="kumon__cliente">KUMON / I Go</p>
+        <p class="kumon__resumo">Plataforma de venda de pacotes de hospedagem e inscrições para a convenção do KUMON, com cerca de 2.400 convidados e tickets de R$ 4,4 mil a R$ 7,8 mil. Usa três gateways de pagamento: Asaas (Pix e cartão parcelado), Cielo (cartão em até 10x) e Stripe (cartões internacionais).</p>
+        <ul class="chips" aria-label="Tecnologias"><li>Vue 3</li><li>Vuetify</li><li>Pinia</li><li>.NET Core</li><li>SQL Server</li></ul>
+        <ol class="kumon__marcador" aria-hidden="true"><li></li><li></li><li></li></ol>
+      </div>
+
+      <div class="kumon__cena">
+        <div class="fx-etapa kumon__etapa">
+          <p class="kumon__valor"><span>~2.400</span></p>
+          <p class="kumon__legenda">convidados</p>
+          <p class="kumon__nota">tickets de <b>R$ 4,4 mil</b> a <b>R$ 7,8 mil</b></p>
+        </div>
+
+        <div class="fx-etapa kumon__etapa">
+          <div class="lanterna">
+            <div class="lanterna__barra" style="--n:0"><i></i><strong>Asaas</strong><span>Pix, cartão parcelado e split de pagamento</span></div>
+            <div class="lanterna__barra" style="--n:1"><i></i><strong>Cielo</strong><span>cartão em até 10x</span></div>
+            <div class="lanterna__barra" style="--n:2"><i></i><strong>Stripe</strong><span>convidados internacionais</span></div>
+          </div>
+        </div>
+
+        <div class="fx-etapa kumon__etapa kumon__etapa--final">
+          <p class="kumon__valor kumon__valor--ouro"><span class="conta" data-fim="60" data-prefixo="+R$ " data-sufixo=" mil">+R$ 60 mil</span></p>
+          <p class="kumon__legenda">nos 4 primeiros dias</p>
+          <dl class="kumon__extras">
+            <div><dt>R$ 2 mi</dt><dd>de receita prevista</dd></div>
+            <div><dt><span class="conta" data-fim="1700" data-sufixo="+">1.700+</span></dt><dd>testes automatizados</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <details class="detalhes" data-fx-fundo="#050608" data-fx-tinta="#ECE8E0">
+    <summary><span>Ver detalhes do projeto</span><i aria-hidden="true"></i></summary>
+    <div class="detalhes__corpo">
+      <p class="detalhes__intro">E-commerce com painel administrativo para o ecossistema I Go. Vende inscrições e pacotes de hospedagem e se conecta ao credenciamento por QR code no check-in.</p>
+      <dl class="detalhes__lista">
+        <div><dt>Pagamentos com três gateways</dt><dd>Asaas para Pix, cartão parcelado e split de pagamento; Cielo para cartão em até 10x; Stripe para convidados internacionais. Os três confirmam o pagamento só pelo webhook, que é idempotente e ignora eventos repetidos.</dd></div>
+        <div><dt>Sem venda acima do estoque</dt><dd>A vaga é reservada com um UPDATE condicional atômico, e uma reserva vencida volta ao estoque sozinha.</dd></div>
+        <div><dt>Financeiro</dt><dd>O painel separa a taxa do gateway da taxa da casa, concilia o que foi cobrado com o líquido e trata estorno e parcelas.</dd></div>
+        <div><dt>Multi-idioma e precificação por plano</dt><dd>Titular e acompanhante dividem a mesma vaga.</dd></div>
+        <div><dt>Qualidade</dt><dd>Mais de 1.700 testes automatizados, com scripts de banco idempotentes e versionados.</dd></div>
+      </dl>
+    </div>
+  </details>
+
+  <!-- ===================== 6 · VITRINE ===================== -->
+  <section class="vitrine" aria-label="Outros projetos" data-fx-fundo="#0A0C10" data-fx-tinta="#ECE8E0">
+    <article class="obra obra--a">
+      <figure class="obra__img" data-fx="crescer"><img data-fx-paralaxe="0.06" src="/osesp-1.png" alt="Tela de login do software da OSESP sobre foto noturna da Sala São Paulo" loading="lazy" width="1902" height="907"></figure>
+      <div class="obra__texto" data-fx="subir">
+        <p class="rotulo">Software</p>
+        <h3>OSESP</h3>
+        <p>Software desenvolvido para a OSESP (Orquestra Sinfônica do Estado de São Paulo) para otimizar a gestão de concertos: controle de repertórios, registro de apresentações e emissão de relatórios, tornando os processos mais ágeis e eficientes.</p>
+      </div>
+    </article>
+
+    <article class="obra obra--b">
+      <figure class="obra__img" data-fx="crescer"><img data-fx-paralaxe="0.06" src="/dirtec.png" alt="Página inicial do site da DIRTEC" loading="lazy" width="1902" height="907"></figure>
+      <div class="obra__texto" data-fx="subir">
+        <p class="rotulo">Website Institucional</p>
+        <h3>DIRTEC</h3>
+        <p>Site para uma empresa de soluções de energia, com venda, manutenção e assistência técnica em nobreaks. Apresenta os serviços, transmite credibilidade e facilita o contato de quem busca segurança energética.</p>
+        <a class="link-seta" href="https://dirtec-landing-page.vercel.app/" target="_blank" rel="noopener noreferrer">Ver projeto online</a>
+      </div>
+    </article>
+
+    <div class="estudos">
+      <article class="estudo" data-fx="subir">
+        <img src="/beauty.png" alt="Página do projeto Beauty Salon" loading="lazy" width="1902" height="901">
+        <p class="rotulo">Website Institucional</p>
+        <h3>Beauty Salon</h3>
+        <p>Projeto educacional de um salão de beleza, criado para aplicar boas práticas de programação e de layout responsivo.</p>
+        <a class="link-seta" href="https://italo-tech.github.io/beauty-salon/" target="_blank" rel="noopener noreferrer">Ver projeto online</a>
+      </article>
+      <article class="estudo" data-fx="subir" data-fx-atraso="100">
+        <img src="/wildbeast.png" alt="Página do projeto Wildbeast" loading="lazy" width="1662" height="870">
+        <p class="rotulo">Portal Educacional</p>
+        <h3>Wildbeast</h3>
+        <p>Projeto educacional sobre o estudo dos lobos, unindo conteúdo científico com boas práticas de desenvolvimento.</p>
+        <a class="link-seta" href="https://italo-tech.github.io/wild-beast/" target="_blank" rel="noopener noreferrer">Ver projeto online</a>
+      </article>
+      <article class="estudo" data-fx="subir" data-fx-atraso="200">
+        <img src="/brafe.png" alt="Página do projeto Brafé" loading="lazy" width="1663" height="869">
+        <p class="rotulo">Website Institucional</p>
+        <h3>Brafé</h3>
+        <p>Site de uma cafeteria, desenvolvido para aprendizagem e aprimoramento de boas práticas de programação.</p>
+        <a class="link-seta" href="https://italo-tech.github.io/projeto-brafe/" target="_blank" rel="noopener noreferrer">Ver projeto online</a>
+      </article>
+      <article class="estudo" data-fx="subir" data-fx-atraso="300">
+        <img src="/landing.png" alt="Página do projeto Landing" loading="lazy" width="1903" height="903">
+        <p class="rotulo">Landing Page</p>
+        <h3>Landing</h3>
+        <p>Site de viagens fictício desenvolvido para estudar novas tecnologias, como Tailwind CSS, e boas práticas de layout.</p>
+      </article>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== 7 · SOBRE ===================== -->
+<section id="about" class="sobre" data-fx-fundo="#0C0E12" data-fx-tinta="#ECE8E0">
+  <div class="sobre__foto" data-fx="crescer">
+    <img src="/perfil-italo.png" alt="Ítalo Henrique sorrindo em frente ao computador" width="640" height="640" loading="lazy">
+    <span class="sobre__selo">5+ anos de experiência</span>
+  </div>
+
+  <div class="sobre__texto">
+    <p class="rotulo">Sobre mim</p>
+    <h2 class="titulo-1" data-fx="palavras" data-fx-duracao="500">Ítalo Henrique</h2>
+    <p class="sobre__cargo">Desenvolvedor Full Stack · Full Cycle</p>
+    <div class="sobre__prosa" data-fx="subir">
+      <p>Há 5 anos construo software de ponta a ponta: da modelagem do banco de dados à interface final, passando por APIs, integrações de pagamento e entrega contínua. Sou formado em Análise e Desenvolvimento de Sistemas pela Universidade Nove de Julho.</p>
+      <p>O que me move é resolver problemas reais de negócio com código confiável: sistemas que aguentam volume, regras financeiras que fecham no centavo e interfaces que qualquer pessoa entende. Trabalho bem em equipe, compartilho conhecimento e encaro cada novo desafio como uma chance de aprender uma tecnologia nova.</p>
+      <p>No dia a dia uso IA generativa e agentes de IA para entregar mais rápido sem abrir mão da qualidade. Fora do código, gosto de futebol, ciclismo, leitura e de viajar com a família.</p>
+    </div>
+
+    <dl class="fatos" data-fx="subir">
+      <div><dt>5+ anos</dt><dd>como Desenvolvedor Full Stack</dd></div>
+      <div><dt>Full Cycle</dt><dd>do banco de dados ao deploy</dd></div>
+      <div><dt>UNINOVE</dt><dd>Análise e Desenvolvimento de Sistemas</dd></div>
+    </dl>
+
+    <h3 class="ficha__titulo">Competências técnicas</h3>
+    <dl class="ficha" data-fx="surgir">
+      <div><dt>Front-end</dt><dd>Vue.js 2 e 3 · TypeScript · HTML5 · CSS3 · Tailwind CSS · Bootstrap · Web design responsivo</dd></div>
+      <div><dt>Back-end e dados</dt><dd>Node.js · Sequelize · APIs REST · SQL · MySQL</dd></div>
+      <div><dt>DevOps</dt><dd>Git e GitHub · CI/CD · Docker</dd></div>
+      <div><dt>IA aplicada</dt><dd>IA generativa · Agentes de IA · Claude</dd></div>
+      <div><dt>Ferramentas</dt><dd>VS Code · Postman · Insomnia · Jira · Notion · Trello</dd></div>
+      <div><dt>Em evolução</dt><dd>C# e .NET · Engenharia de Software · Inglês · Espanhol</dd></div>
+      <div><dt>Habilidades interpessoais</dt><dd>Resolução de problemas · Aprendizado rápido · Atenção aos detalhes · Colaboração em equipe · Comunicação clara e objetiva</dd></div>
+    </dl>
+
+    <div class="acoes">
+      <a class="botao botao--linha" href="https://www.linkedin.com/in/italo-tech/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="botao botao--linha" href="https://github.com/Italo-Tech" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 8 · CONTATO ===================== -->
+<section id="contact" class="contato" data-fx-fundo="#050506" data-fx-tinta="#ECE8E0">
+  <img class="contato__leao" src="/logo.png" alt="" width="120" height="120" data-fx="crescer" data-fx-duracao="1400">
+  <p class="rotulo" data-fx="surgir">Contato</p>
+  <h2 class="contato__titulo" data-fx="subir">Vamos tirar seu projeto do papel?</h2>
+  <p class="contato__sub" data-fx="subir" data-fx-atraso="120">Conte o que você precisa e eu retorno com uma proposta clara de escopo, prazo e investimento.</p>
+  <a class="botao botao--ouro botao--grande" data-fx="subir" data-fx-atraso="240" href="https://wa.me/5511984111337?text=Ol%C3%A1%2C%20%C3%8Dtalo!%20Vim%20pelo%20site%20da%20Lion%20Dev%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    Chamar no WhatsApp
+  </a>
+
+  <ul class="canais">
+    <li data-fx="subir"><span class="rotulo">Telefone</span><a href="https://wa.me/5511984111337?text=Ol%C3%A1%2C%20%C3%8Dtalo!%20Vim%20pelo%20site%20da%20Lion%20Dev%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer">+55 11 98411-1337</a></li>
+    <li data-fx="subir" data-fx-atraso="100"><span class="rotulo">Email</span><a href="mailto:liondevelopeer@gmail.com">liondevelopeer@gmail.com</a></li>
+    <li data-fx="subir" data-fx-atraso="200"><span class="rotulo">Endereço</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Castro+Lopes+660+S%C3%A3o+Paulo" target="_blank" rel="noopener noreferrer">Rua Castro Lopes 660 - SP - São Paulo</a></li>
+  </ul>
+</section>
+
+</main>
+
+<!-- ===================== RODAPÉ ===================== -->
+<footer class="rodape" aria-label="Rodapé">
+  <div class="rodape__marca">
+    <span class="rodape__nome">Lion<b>Dev</b></span>
+    <span>Sua solução web completa</span>
+  </div>
+  <nav aria-label="Rodapé">
+    <ul>
+      <li><a href="#hero">Início</a></li>
+      <li><a href="#services">Serviços</a></li>
+      <li><a href="#projects">Projetos</a></li>
+      <li><a href="#about">Sobre</a></li>
+      <li><a href="#contact">Contato</a></li>
+    </ul>
+  </nav>
+  <ul class="rodape__redes">
+    <li><a href="https://www.linkedin.com/in/italo-tech/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+    <li><a href="https://github.com/Italo-Tech" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    <li><a href="https://www.instagram.com/italo_lion_dev/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+    <li><a href="https://twitter.com/taloHenrique20" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
+  </ul>
+  <p class="rodape__legal">Copyright © 2026 Lion Dev. Todos os direitos reservados <span>v.2.1.0</span></p>
+</footer>
+
+<div class="grao" aria-hidden="true"></div>
+</body>
+</html>
